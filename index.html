@@ -295,7 +295,7 @@
     </div>
   </section>
 
-  <!-- MEMBER PERSPECTIVES / 3D MARQUEE REVIEWS -->
+  <!-- MEMBER PERSPECTIVES / 3D 3-LINE AUTO-SCROLLING MARQUEE -->
   <section class="section-reviews" id="reviews">
     <div class="container">
       <div class="reviews-header-center">
@@ -307,12 +307,13 @@
         </div>
       </div>
 
-      <!-- 3D Perspective Marquee Container -->
+      <!-- 3D Perspective Marquee Container (3 Auto-Scrolling Lines) -->
       <div class="reviews-3d-stage">
         <div class="marquee-3d-skew">
-          <!-- Column 1: Downward -->
-          <div class="marquee-col col-down">
-            <div class="marquee-content">
+          
+          <!-- Line 1: Auto-Scrolling UP -->
+          <div class="marquee-col">
+            <div class="marquee-track scroll-up-1">
               <div class="review-mini-card">
                 <div class="card-head">
                   <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Amit Kulkarni" class="review-avatar">
@@ -345,9 +346,21 @@
                 </div>
                 <blockquote>“The 06:00 to 22:30 hours make it seamless for my corporate BKC schedule.”</blockquote>
               </div>
+
+              <div class="review-mini-card">
+                <div class="card-head">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Pooja Shah" class="review-avatar">
+                  <div class="meta">
+                    <strong>Pooja Shah</strong>
+                    <span>🇮🇳 Ghatkopar</span>
+                  </div>
+                </div>
+                <blockquote>“Super hygienic, respectful crowd, and clean private shower facilities.”</blockquote>
+              </div>
             </div>
-            <!-- Duplicated for seamless loop -->
-            <div class="marquee-content" aria-hidden="true">
+
+            <!-- Loop Clone for Line 1 -->
+            <div class="marquee-track scroll-up-1" aria-hidden="true">
               <div class="review-mini-card">
                 <div class="card-head">
                   <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Amit Kulkarni" class="review-avatar">
@@ -380,12 +393,7 @@
                 </div>
                 <blockquote>“The 06:00 to 22:30 hours make it seamless for my corporate BKC schedule.”</blockquote>
               </div>
-            </div>
-          </div>
 
-          <!-- Column 2: Upward (Reverse) -->
-          <div class="marquee-col col-up">
-            <div class="marquee-content">
               <div class="review-mini-card">
                 <div class="card-head">
                   <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Pooja Shah" class="review-avatar">
@@ -396,7 +404,12 @@
                 </div>
                 <blockquote>“Super hygienic, respectful crowd, and clean private shower facilities.”</blockquote>
               </div>
+            </div>
+          </div>
 
+          <!-- Line 2: Auto-Scrolling DOWN -->
+          <div class="marquee-col">
+            <div class="marquee-track scroll-down">
               <div class="review-mini-card">
                 <div class="card-head">
                   <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Rahul Mehta" class="review-avatar">
@@ -418,20 +431,32 @@
                 </div>
                 <blockquote>“The functional turf zone and battle ropes give the best metabolic burn!”</blockquote>
               </div>
-            </div>
-            <!-- Duplicated for seamless loop -->
-            <div class="marquee-content" aria-hidden="true">
+
               <div class="review-mini-card">
                 <div class="card-head">
-                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Pooja Shah" class="review-avatar">
+                  <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=120&q=80" alt="Kunal Verma" class="review-avatar">
                   <div class="meta">
-                    <strong>Pooja Shah</strong>
-                    <span>🇮🇳 Ghatkopar</span>
+                    <strong>Kunal Verma</strong>
+                    <span>🇮🇳 Mumbai</span>
                   </div>
                 </div>
-                <blockquote>“Super hygienic, respectful crowd, and clean private shower facilities.”</blockquote>
+                <blockquote>“Olympic deadlift platform with bumper plates is top tier.”</blockquote>
               </div>
 
+              <div class="review-mini-card">
+                <div class="card-head">
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Rohan Shinde" class="review-avatar">
+                  <div class="meta">
+                    <strong>Rohan Shinde</strong>
+                    <span>🇮🇳 Ghatkopar West</span>
+                  </div>
+                </div>
+                <blockquote>“Hands down the best annual membership value in this area.”</blockquote>
+              </div>
+            </div>
+
+            <!-- Loop Clone for Line 2 -->
+            <div class="marquee-track scroll-down" aria-hidden="true">
               <div class="review-mini-card">
                 <div class="card-head">
                   <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Rahul Mehta" class="review-avatar">
@@ -453,12 +478,7 @@
                 </div>
                 <blockquote>“The functional turf zone and battle ropes give the best metabolic burn!”</blockquote>
               </div>
-            </div>
-          </div>
 
-          <!-- Column 3: Downward -->
-          <div class="marquee-col col-down">
-            <div class="marquee-content">
               <div class="review-mini-card">
                 <div class="card-head">
                   <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=120&q=80" alt="Kunal Verma" class="review-avatar">
@@ -480,58 +500,23 @@
                 </div>
                 <blockquote>“Hands down the best annual membership value in this area.”</blockquote>
               </div>
-
-              <div class="review-mini-card">
-                <div class="card-head">
-                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Harsh Vardhan" class="review-avatar">
-                  <div class="meta">
-                    <strong>Harsh Vardhan</strong>
-                    <span>🇮🇳 Mumbai</span>
-                  </div>
-                </div>
-                <blockquote>“Great lighting, clean machines, and no overcrowding issues.”</blockquote>
-              </div>
-            </div>
-            <!-- Duplicated for seamless loop -->
-            <div class="marquee-content" aria-hidden="true">
-              <div class="review-mini-card">
-                <div class="card-head">
-                  <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=120&q=80" alt="Kunal Verma" class="review-avatar">
-                  <div class="meta">
-                    <strong>Kunal Verma</strong>
-                    <span>🇮🇳 Mumbai</span>
-                  </div>
-                </div>
-                <blockquote>“Olympic deadlift platform with bumper plates is top tier.”</blockquote>
-              </div>
-
-              <div class="review-mini-card">
-                <div class="card-head">
-                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Rohan Shinde" class="review-avatar">
-                  <div class="meta">
-                    <strong>Rohan Shinde</strong>
-                    <span>🇮🇳 Ghatkopar West</span>
-                  </div>
-                </div>
-                <blockquote>“Hands down the best annual membership value in this area.”</blockquote>
-              </div>
-
-              <div class="review-mini-card">
-                <div class="card-head">
-                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Harsh Vardhan" class="review-avatar">
-                  <div class="meta">
-                    <strong>Harsh Vardhan</strong>
-                    <span>🇮🇳 Mumbai</span>
-                  </div>
-                </div>
-                <blockquote>“Great lighting, clean machines, and no overcrowding issues.”</blockquote>
-              </div>
             </div>
           </div>
 
-          <!-- Column 4: Upward (Reverse) -->
-          <div class="marquee-col col-up">
-            <div class="marquee-content">
+          <!-- Line 3: Auto-Scrolling UP (Different Speed) -->
+          <div class="marquee-col">
+            <div class="marquee-track scroll-up-2">
+              <div class="review-mini-card">
+                <div class="card-head">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Harsh Vardhan" class="review-avatar">
+                  <div class="meta">
+                    <strong>Harsh Vardhan</strong>
+                    <span>🇮🇳 Mumbai</span>
+                  </div>
+                </div>
+                <blockquote>“Great lighting, clean machines, and no overcrowding issues.”</blockquote>
+              </div>
+
               <div class="review-mini-card">
                 <div class="card-head">
                   <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Deepa Nair" class="review-avatar">
@@ -551,7 +536,7 @@
                     <span>🇮🇳 Mumbai</span>
                   </div>
                 </div>
-                <blockquote>“The air conditioning makes a massive difference during evening sets.”</blockquote>
+                <blockquote>“The air conditioning makes a massive difference during heavy sets.”</blockquote>
               </div>
 
               <div class="review-mini-card">
@@ -565,8 +550,20 @@
                 <blockquote>“Smooth cable crossovers and well-maintained treadmills.”</blockquote>
               </div>
             </div>
-            <!-- Duplicated for seamless loop -->
-            <div class="marquee-content" aria-hidden="true">
+
+            <!-- Loop Clone for Line 3 -->
+            <div class="marquee-track scroll-up-2" aria-hidden="true">
+              <div class="review-mini-card">
+                <div class="card-head">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Harsh Vardhan" class="review-avatar">
+                  <div class="meta">
+                    <strong>Harsh Vardhan</strong>
+                    <span>🇮🇳 Mumbai</span>
+                  </div>
+                </div>
+                <blockquote>“Great lighting, clean machines, and no overcrowding issues.”</blockquote>
+              </div>
+
               <div class="review-mini-card">
                 <div class="card-head">
                   <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Deepa Nair" class="review-avatar">
@@ -586,7 +583,7 @@
                     <span>🇮🇳 Mumbai</span>
                   </div>
                 </div>
-                <blockquote>“The air conditioning makes a massive difference during evening sets.”</blockquote>
+                <blockquote>“The air conditioning makes a massive difference during heavy sets.”</blockquote>
               </div>
 
               <div class="review-mini-card">
@@ -601,6 +598,7 @@
               </div>
             </div>
           </div>
+
         </div>
 
         <!-- Vignette Gradient Masks -->

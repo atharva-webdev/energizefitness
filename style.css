@@ -804,39 +804,46 @@ a {
   flex-shrink: 0;
 }
 
-.marquee-content {
+.marquee-track {
   display: flex;
   flex-direction: column;
   gap: 16px;
   flex-shrink: 0;
+  will-change: transform;
 }
 
-.marquee-col.col-down .marquee-content {
-  animation: marquee-down 34s linear infinite;
+/* 3 Auto-Scrolling Lines with Parallax Variations */
+.scroll-up-1 {
+  animation: scroll-up 22s linear infinite;
 }
 
-.marquee-col.col-up .marquee-content {
-  animation: marquee-up 36s linear infinite;
+.scroll-down {
+  animation: scroll-down 26s linear infinite;
 }
 
-.reviews-3d-stage:hover .marquee-content {
+.scroll-up-2 {
+  animation: scroll-up 19s linear infinite;
+}
+
+/* Pause smoothly on hover so reviews can be read */
+.reviews-3d-stage:hover .marquee-track {
   animation-play-state: paused;
 }
 
-@keyframes marquee-down {
-  from {
+@keyframes scroll-up {
+  0% {
     transform: translateY(0);
   }
-  to {
-    transform: translateY(-50%);
+  100% {
+    transform: translateY(calc(-100% - 16px));
   }
 }
 
-@keyframes marquee-up {
-  from {
-    transform: translateY(-50%);
+@keyframes scroll-down {
+  0% {
+    transform: translateY(calc(-100% - 16px));
   }
-  to {
+  100% {
     transform: translateY(0);
   }
 }
@@ -1279,5 +1286,24 @@ a {
   .footer-content {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .reviews-3d-stage {
+    height: 440px;
+    perspective: 280px;
+  }
+  .marquee-3d-skew {
+    transform: scale(0.9) translateX(-15px) translateY(0px) translateZ(-40px) rotateX(18deg) rotateY(-8deg) rotateZ(16deg);
+    transform-origin: center center;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-3d-stage {
+    height: 390px;
+    perspective: 240px;
+  }
+  .marquee-3d-skew {
+    transform: scale(0.78) translateX(-5px) translateY(0px) translateZ(-25px) rotateX(16deg) rotateY(-6deg) rotateZ(14deg);
+    transform-origin: center center;
   }
 }
