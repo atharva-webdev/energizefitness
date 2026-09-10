@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://energizefitness.vercel.app/sitemap.xml
