@@ -738,27 +738,33 @@ a {
   border-color: var(--gold-hover);
 }
 
-/* REVIEWS */
+/* 3D MARQUEE REVIEWS */
 .section-reviews {
-  padding: 90px 0;
+  padding: 100px 0;
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
-.reviews-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 60px;
+.reviews-header-center {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 36px;
+}
+
+.rating-display-strip {
+  display: inline-flex;
   align-items: center;
-}
-
-.rating-display {
-  margin-top: 18px;
+  gap: 12px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--gold-border);
+  padding: 6px 18px;
+  border-radius: var(--radius-xs);
+  margin-top: 14px;
 }
 
 .rating-score {
-  display: block;
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--gold);
 }
@@ -768,37 +774,169 @@ a {
   color: var(--text-muted);
 }
 
-.reviews-list {
+/* 3D Stage */
+.reviews-3d-stage {
+  position: relative;
+  height: 480px;
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  overflow: hidden;
+  perspective: 320px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #08090c;
+}
+
+.marquee-3d-skew {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  transform: translateX(-40px) translateY(0px) translateZ(-60px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg);
+  width: max-content;
+}
+
+.marquee-col {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 16px;
+  flex-shrink: 0;
 }
 
-.review-quote {
-  padding-left: 20px;
-  border-left: 1px solid var(--border-light);
+.marquee-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
 }
 
-.review-quote p {
-  font-size: 0.98rem;
-  color: var(--text-ivory);
-  line-height: 1.65;
-  margin-bottom: 12px;
+.marquee-col.col-down .marquee-content {
+  animation: marquee-down 34s linear infinite;
 }
 
-.review-quote footer {
+.marquee-col.col-up .marquee-content {
+  animation: marquee-up 36s linear infinite;
+}
+
+.reviews-3d-stage:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-up {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Review Mini Cards */
+.review-mini-card {
+  width: 220px;
+  background: #13151c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xs);
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: var(--transition);
+}
+
+.review-mini-card:hover {
+  border-color: var(--gold-border);
+}
+
+.review-mini-card .card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--gold-border);
+}
+
+.review-mini-card .meta {
   display: flex;
   flex-direction: column;
 }
 
-.review-quote strong {
-  font-size: 0.88rem;
+.review-mini-card .meta strong {
+  font-size: 0.82rem;
   color: var(--text-ivory);
+  line-height: 1.2;
 }
 
-.review-quote span {
-  font-size: 0.76rem;
-  color: var(--text-muted);
+.review-mini-card .meta span {
+  font-size: 0.7rem;
+  color: var(--gold);
+}
+
+.review-mini-card blockquote {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Fading Vignette Masks */
+.vignette-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25%;
+  background: linear-gradient(to bottom, #08090c 10%, transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vignette-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25%;
+  background: linear-gradient(to top, #08090c 10%, transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vignette-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+  background: linear-gradient(to right, #08090c 10%, transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vignette-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  background: linear-gradient(to left, #08090c 10%, transparent);
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* LOCATION */
